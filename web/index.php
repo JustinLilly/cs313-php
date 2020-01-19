@@ -12,7 +12,8 @@
       <header>
           <?php include $_SERVER ['DOCUMENT_ROOT'] . '/cs313-php/web/common/header.php'; ?>
           <nav id="page-nav">
-            <?php include $_SERVER ['DOCUMENT_ROOT'] . '/cs313-php/web/common/nav.php'; ?>
+              <li><a href="/cs313-php/web/intro.php" title="Introduction">Intro to me</a></li>
+              <li><a href="/cs313-php/web/assignments.php" title="Assignments directory">Assignments</a></li>
           </nav>
       </header>
   </main>
