@@ -16,6 +16,8 @@
               <li><a href="/week2/assignments.php" title="Assignments directory">Assignments</a></li>
           </nav>
       </header>
+
+      <h1>Welcome!</h1>
   </main>
 </body>
 </html>

@@ -85,8 +85,9 @@ header a {
 #nav-list li{
     color: white;
     padding: 10px;
+    list-style: none;
 }
-#nav-list li a{
+#nav-list li a, #nav-list li a:visited{
     color: white;
 }
 #nav-list li a:active, #nav-list li a:hover{
