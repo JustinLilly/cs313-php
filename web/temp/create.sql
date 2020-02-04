@@ -5,7 +5,7 @@ CREATE TABLE w5_relationships
 (
     id SERIAL NOT NULL PRIMARY KEY,
     description VARCHAR(100) NOT NULL);
-)
+
 
 CREATE TABLE w5_family_members 
 (
@@ -13,7 +13,7 @@ CREATE TABLE w5_family_members
     first_name VARCHAR(100) NOT NULL, 
     last_name VARCHAR(100) NOT NULL,
     relationship_id INT NOT NULL REFERENCES w5_relationships(id));
-)
+
 
 INSERT INTO w5_relationships (description) VALUES ('Mother');
 INSERT INTO w5_relationships (description) VALUES ('Father');

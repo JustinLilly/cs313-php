@@ -1,5 +1,5 @@
 <?php
-    require "dbConnect.php";
+    require "dbconnect.php";
     $db = get_db();
 
     $family_members = $db->prepare("SELECT * FROM w5_family_members");
@@ -15,6 +15,6 @@
         while($rRow = $relationships->fetch(PDO::FETCH_ASSOC)){
             $relationship = $rRow["description"];
         }
-        echo "<p>$first_name $last_name is my $relationship_id</p>";
+        echo "<p> $first_name $last_name is my $relationship_id</p>";
     }
 ?>
