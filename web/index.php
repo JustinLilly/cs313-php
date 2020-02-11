@@ -13,7 +13,7 @@
           <?php include $_SERVER ['DOCUMENT_ROOT'] . '/cs313-php/web/common/header.php'; ?>
           <nav id="page-nav">
               <li><a href="/week02/intro.php" title="Introduction">Intro to me</a></li>
-              <li><a href="/week02assignments.php" title="Assignments directory">Assignments</a></li>
+              <li><a href="/week02/assignments.php" title="Assignments directory">Assignments</a></li>
           </nav>
       </header>
   </main>
