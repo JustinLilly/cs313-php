@@ -16,8 +16,8 @@
       <header>
           <?php include $_SERVER ['DOCUMENT_ROOT'] . '/cs313-php/web/week2/common/header.php'; ?>
           <nav id="page-nav">
-            <a href="/add-user.php">Add User</a>
-            <a href="/add-event.php">Add Event</a>
+            <a href="/projectOne/add-user.php">Add User</a>
+            <a href="/projectOne/add-event.php">Add Event</a>
             
           </nav>
 
