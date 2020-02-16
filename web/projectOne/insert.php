@@ -17,7 +17,7 @@ try
 	
 	// SELECT c.relname FROM pg_class c WHERE c.relkind = 'S';   -- display all sequences
 	// get id of last inserted row - save in $userId
-	$userId = $db->lastInsertId("p1_user_id_seq");
+	$userId = $db->lastInsertId("p1_user_user_id_seq");
 }
 catch (Exception $ex)
 {
