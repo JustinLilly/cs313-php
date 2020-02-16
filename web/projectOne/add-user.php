@@ -13,7 +13,7 @@
           <?php include $_SERVER ['DOCUMENT_ROOT'] . '/cs313-php/web/week2/common/header.php'; ?>
           <nav id="page-nav"></nav>
 
-          <form action="insert.php" method="post">
+          <form action="insert.php" method="POST">
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" id="first_name">
             <label for="last_name">Last Name:</label>
