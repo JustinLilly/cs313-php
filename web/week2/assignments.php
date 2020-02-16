@@ -15,9 +15,9 @@
             <?php include $_SERVER ['DOCUMENT_ROOT'] . '/week2/common/nav.php'; ?>
           </nav>
       </header>
-      <?php
-          echo "Coming soon!";
-      ?>
+      
+      <h1>Assignments</h1>
+      <ul><li><a href="/../projectOne/index.php">Project One</a></li></ul>
   </main>
 </body>
 </html>

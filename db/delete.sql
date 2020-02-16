@@ -1,3 +1,3 @@
-DROP TABLE user;
-DROP TABLE event;
-DROP TABLE user_event_map;
+DROP TABLE IF EXISTS p1_user;
+DROP TABLE IF EXISTS p1_event;
+DROP TABLE IF EXISTS p1_user_event_map;
