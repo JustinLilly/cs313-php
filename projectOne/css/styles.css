@@ -1,0 +1,9 @@
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
+/* body {
+    background-color: aqua;
+} */
