@@ -3,20 +3,24 @@
 -- ----------------------------------------------- --
 INSERT INTO p1_user (     first_name
                         , last_name
-                        , email) 
+                        , email
+                        , password) 
                  VALUES ( 'David'
                         , 'Johnson'
-                        , 'dogdog@yahoo.com');
+                        , 'dogdog@yahoo.com'
+                        , 'hellothere');
 INSERT INTO p1_user (     first_name
                         , last_name
-                        , email) 
+                        , email
+                        , password) 
                  VALUES ( 'Don'
                         , 'Cheadle'
-                        , 'warmachine@yahoo.com');
+                        , 'warmachine@yahoo.com'
+                        , 'ironman');
 -- ----------------------------------------------- --
 -- -------- POPULATE THE EVENT TABLE ------------- --
 -- ----------------------------------------------- -- 
-INSERT INTO p1_event (         event_name
+INSERT INTO p1_event (      event_name
                           , event_date) 
                    VALUES ( 'Christmas'
                           , current_timestamp);

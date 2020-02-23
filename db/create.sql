@@ -1,8 +1,9 @@
 CREATE TABLE p1_user
-( user_id    SERIAL       NOT NULL   PRIMARY KEY
+( user_id       SERIAL       NOT NULL   PRIMARY KEY
 , first_name    VARCHAR(50)  NOT NULL
 , last_name     VARCHAR(50)  NOT NULL
 , email         VARCHAR(50)  UNIQUE     NOT NULL 
+, password      TEXT         NOT NULL
 );
 
 CREATE TABLE p1_event

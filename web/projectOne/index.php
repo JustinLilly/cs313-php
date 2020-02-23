@@ -1,28 +1,48 @@
 <?php
-	require("dbConnect.php");
+	require_once 'library/dbConnect.php';
 	$db = get_db();
-?>
-<!doctype html>
-<html lang="en_us">
-<head>
-  <meta charset="utf-8">
-  <title>Fantastic Gift Exchange Manager</title>
-  <meta name="description" content="cs313 project one">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Justin Lilly">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-<body>
-  <main>
-      <header>
-          <?php include $_SERVER ['DOCUMENT_ROOT'] . '/cs313-php/web/week2/common/header.php'; ?>
-          <nav id="page-nav">
-            <a href="/projectOne/add-user.php">Add User</a>
-            <a href="/projectOne/add-event.php">Add Event</a>
-            
-          </nav>
+	require_once 'model/main-model.php'; 
 
-          <button type="button">Match Users</button>
-      </header>
-  </main>
-</body>
-</html>
+
+	$action = filter_input(INPUT_POST, 'action');
+	if ($action == NULL){
+	 $action = filter_input(INPUT_GET, 'action');
+	}
+
+// nav
+$events = getEvents();
+$eventList = '<ul>';
+$eventList .= "<li><a href='./view/add-event.php'>Add New Event</a><br></li>";
+foreach ($events as $event) {
+ $eventList .= "<li><a href='./library/display-event.php/?eventId=".urlencode($event['event_id'])."' title='$event[event_name]'>$event[event_name]</a></li>";
+}
+$eventList .= '</ul>';
+
+
+// Do stuff
+switch ($action){
+	case 'event':
+		include_once 'view/event-list.php';
+		break;
+	case 'add-event':
+		include_once 'view/add-event.php';
+		break;
+	case 'update-event':
+		include_once 'view/update-event.php';
+		break;
+	case 'user':
+		include_once 'view/user-list.php';
+		break;
+	case 'add-user':
+		include_once 'view/add-user.php';
+		break;
+	case 'update-user':
+		include_once 'view/update-user.php';
+		break;
+	default:
+		include 'view/home.php';
+		break;
+	}
+
+
+?>

@@ -6,7 +6,7 @@
 		<div class="container">
          <?php
             $personId = $_GET['personId'];
-            $statement = $db->prepare('SELECT * FROM p1_user WHERE Id = :personId');
+            $statement = $db->prepare('SELECT * FROM p1_user WHERE user_id = :personId');
             $statement->bindValue(':personId', $personId);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -16,16 +16,17 @@
                $last_name   = $row['last_name'];
                $email = $row['email'];
 
-               $foods = $db->prepare("SELECT first_name, last_name FROM p1_user WHERE ID = $food_id");
-               $foods->execute();
-               while ($fRow = $foods->fetch(PDO::FETCH_ASSOC))
+               $users = $db->prepare("SELECT first_name, last_name, email FROM p1_user WHERE user_id = $id");
+               $users->execute();
+               while ($uRow = $users->fetch(PDO::FETCH_ASSOC))
                {
-                  $food = $fRow['food'];
+                  $first_name = $uRow['first_name'];
+                  $last_name = $uRow['last_name'];
+                  $email = $uRow['email'];
                }
-               echo "<h1>$first $last's favorite food is $food</h1>";
+               echo "<h1>$first_name $last_name : $email</h1>";
             }
          ?>
-
 		</div>
 	</body>
 </html>
